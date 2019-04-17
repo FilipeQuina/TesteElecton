@@ -46,7 +46,19 @@
       <div class="pane-group">
         <div class="pane-sm sidebar">lorem ipsum</div>
         <div class="pane">
-
+          <form id="cadastro-cliente" action="" class="pane-body">
+            <h3>Cadastro de Cliente</h3>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nome" id="nome">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="CPF" id="cpf">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Telefone" id="telefone">
+            </div>
+            <button type="button" class="btn btn-positive" id="salvar">Salvar</button>
+          </form>
         </div>
       </div>
     </div>
@@ -55,12 +67,7 @@
     </footer>
     <script>
       // You can also require other files to run in this process
-      var read = require('read-file-utf8');
-      var loki = require('lokijs');
-      var db = new loki('db.json');
-      
-      console.log(read(__dirname + '/db.json'));
-      //var clientes = db.addCollection('clientes');
+      require('./renderer.js')
     </script>
 </body>
 
